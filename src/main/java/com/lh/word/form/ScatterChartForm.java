@@ -3,6 +3,8 @@ package com.lh.word.form;
 
 import lombok.Data;
 import org.apache.poi.xddf.usermodel.XDDFColor;
+import org.apache.poi.xddf.usermodel.XDDFLineProperties;
+import org.apache.poi.xddf.usermodel.XDDFSolidFillProperties;
 import org.apache.poi.xddf.usermodel.chart.MarkerStyle;
 
 import java.util.ArrayList;
@@ -32,6 +34,17 @@ public class ScatterChartForm extends ChartFrom {
 
     // 是否自动生成颜色
     private Boolean varyColors;
+
+    private Boolean isShowXGrid = true;//是否显示X轴网格线
+    private Boolean isShowYGrid = true;//是否显示Y轴网格线
+
+
+    public XDDFLineProperties line(){
+        XDDFLineProperties line = new XDDFLineProperties();
+        line.setFillProperties(new XDDFSolidFillProperties(XDDFColor.from(new byte[] {(byte)228,(byte)231,(byte)237})));
+        line.setWidth(0.5);
+        return line;
+    }
 
     @Data
     public static class AreaData {
