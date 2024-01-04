@@ -15,7 +15,7 @@
 更新：解决 【离散图】 新版Microsoft Office打不开docx文件 wps可以打开
 > https://stackoverflow.com/questions/77131316/create-a-chart-in-a-powerpoint-using-apache-poi-and-java-from-scratch
 
-离散图样式设置参考
+离散图样式设置参考（更多参考https://github.com/zhuzhiqiang18/ureport-community  com.bstek.ureport.export.word）
 ```java
 // 字体颜色
 		XDDFSolidFillProperties fontColor = new XDDFSolidFillProperties(XDDFColor.from(new byte[] {(byte)96,(byte)98,(byte)102}));
