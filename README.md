@@ -10,7 +10,7 @@
   散点图
   
 其中 柱状图和散点图加入了自定义颜色的功能
-在WordUtil类中main方法里面,基本上包含了所有的测试用例
+在Test类中main方法里面,基本上包含了所有的测试用例
 
 更新：解决 【离散图】 新版Microsoft Office打不开docx文件 wps可以打开
 > https://stackoverflow.com/questions/77131316/create-a-chart-in-a-powerpoint-using-apache-poi-and-java-from-scratch
