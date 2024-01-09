@@ -38,6 +38,8 @@ public class ScatterChartForm extends ChartFrom {
     private Boolean isShowXGrid = true;//是否显示X轴网格线
     private Boolean isShowYGrid = true;//是否显示Y轴网格线
 
+    private Boolean isShowLegend = false;
+
 
     public XDDFLineProperties line(){
         XDDFLineProperties line = new XDDFLineProperties();

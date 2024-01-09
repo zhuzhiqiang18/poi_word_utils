@@ -14,6 +14,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xwpf.usermodel.*;
+import org.apache.xmlbeans.XmlCursor;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -240,10 +241,36 @@ public class WordUtils {
             }
         }
 
+
+        if(!scatterChartForm.getIsShowLegend()){
+            XmlCursor xmlCursor = chart.getCTChart().newCursor();
+            removeTag(xmlCursor,"legend");
+        }
+
+
         //绘制
         chart.plot(data);
 
 
+    }
+
+
+    /**
+     * 删除指定的标签
+     * @param cursor
+     * @param tag
+     */
+    public static void removeTag(XmlCursor cursor, String tag){
+        while(cursor.hasNextToken()){
+            if(cursor.toNextToken().isStart()){
+                //System.out.println(cursor.getName().getLocalPart());
+                if(cursor.getName().getLocalPart().equals(tag)){
+                    cursor.removeXml();
+                }
+            }
+        }
+
+        cursor.dispose();
     }
 
     /**
