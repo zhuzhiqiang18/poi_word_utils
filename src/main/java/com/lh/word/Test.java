@@ -94,7 +94,7 @@ public class Test {
 
             ScatterChartForm.AreaData areaData = new ScatterChartForm.AreaData();
             areaData.setBottomData(new Integer[]{1, 2, 3, 4, 5, 8, 7});
-            areaData.setLeftData(new Integer[]{5, 5, 5, 4, 5, 6, 7});
+            areaData.setLeftData(new Integer[]{50, 60, 30, 20, 10, 6, 7});
             areaData.setTitle("测试1");
             scatterChartForm.getLists().add(areaData);
 
