@@ -184,9 +184,12 @@ public class WordUtils {
         //分类轴标(X轴),标题位置
         XDDFCategoryAxis bottomAxis = chart.createCategoryAxis(AxisPosition.BOTTOM);
         bottomAxis.setTitle(scatterChartForm.getBottomTitle());
+        bottomAxis.setMajorUnit(scatterChartForm.getXMajorUnit());
+
         //值(Y轴)轴,标题位置
         XDDFValueAxis leftAxis = chart.createValueAxis(AxisPosition.LEFT);
         leftAxis.setTitle(scatterChartForm.getLeftTitle());
+        leftAxis.setMajorUnit(scatterChartForm.getYMajorUnit());
 
         /**
          * 网格线

@@ -40,6 +40,11 @@ public class ScatterChartForm extends ChartFrom {
 
     private Boolean isShowLegend = false;
 
+    private double xMajorUnit = 3;//x坐标步长
+
+    private double yMajorUnit = 20;//y坐标步长
+
+
 
     public XDDFLineProperties line(){
         XDDFLineProperties line = new XDDFLineProperties();
